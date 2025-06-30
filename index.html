@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <img src="Picture1.png">
+    <h1>Elona Hysi</h1>
+    <p>Aspiring Front-End Developer</p>
+  </header>
+
+
+  <section class="about-me" id="about-me">
+    <h2>About Me</h2>
+    <p>
+      I'm a junior web developer with a passion for design and creating meaningful digital experiences.
+      After completing a six-month intensive coding bootcamp, I discovered how much I enjoy building clean,
+      responsive interfaces—especially when I can combine logic with creativity.
+    </p>
+    <p>
+      While I don’t come from a traditional design background, I’ve always had a creative side—I love working
+      with color, composition, and I even paint in my free time. That artistic perspective has shaped how I
+      approach front-end development, with a strong focus on user experience and visual harmony.
+    </p>
+    <p>
+      I’m especially excited by the idea that something I build can be useful to someone in the real world.
+      I'm looking for an internship where I can contribute to real projects, learn from experienced developers,
+      and grow within a company that values its people as true assets.
+    </p>
+  </section>
+
+  <section class="projects" id="projects">
+  <h2>Projects</h2>
+
+  <div class="project hidden">
+    <h3>Project One: Image Gallery</h3>
+    <p>
+      A simple and visually engaging web application where users can browse a collection of photos to use for personal or professional projects. Built with a focus on layout, color balance, and usability, the gallery aims to deliver a clean and accessible experience.
+    </p>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+    <a href="https://github.com/Elona-Hysi/Image-Gallery" target="_blank">View Code</a> 
+  </div>
+
+  <div class="project hidden">
+    <h3>Project Two: To-Do List </h3>
+    <p>
+      A clean and responsive to-do list application that helps users stay organized by tracking their daily tasks. Designed with a simple, user-friendly interface, the app allows users to add, delete, and mark tasks as completed in real-time. This project focuses on both functionality and visual design.
+    </p>
+    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+    <a href="https://github.com/Elona-Hysi/To-Do-List" target="_blank">View Code</a> 
+  </div>
+
+    <div class="project hidden">
+    <h3>Project Three: Registration Form</h3>
+    <p>
+      A functional and visually appealing user registration form built with HTML, CSS, and JavaScript. This is a component found on nearly every modern website, allowing users to enter their information to register for an account. The form includes real-time input validation,  intuitive error messages, and adaptive styling to provide a smooth experience across different screen sizes and devices.
+    </p>
+    <p><strong>Technologies:</strong> HYML, CSS, JavaScript</p>
+    <a href="https://github.com/Elona-Hysi/Registration-Form" target="_blank">View Code</a> 
+  </div>
+
+  <div class="project hidden">
+  <h3>Project Four: FAQ (Frequently Asked Questions)</h3>
+  <p>
+    A clean and user-oriented FAQ section built with HTML and CSS, designed to help users quickly find answers to common questions. This widely used component with a layout that guides users through the content effortlessly. The design focuses on readability, spacing, and intuitive structure.
+  </p>
+  <p><strong>Technologies:</strong> HTML, CSS</p>
+  <a href="https://github.com/Elona-Hysi/FAQ" target="_blank">View Code</a>
+</div>
+
+<div class="project hidden">
+  <h3>Project Five: Food Ordering App</h3>
+  <p>
+    An adaptable and customer-focused food ordering web application that allows users to browse restaurant menus, add items to a cart, and place orders. Designed with an emphasis on intuitive navigation and clean UI, the app supports both desktop and mobile views for a smooth ordering experience.
+  </p>
+  <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React</p>
+  <a href="https://github.com/Elona-Hysi/Food-Order-App" target="_blank">View Code</a> 
+</div>
+
+
+  </section>
+
+  <section class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:hysielona05@gmail.com">hysielona05@gmail.com</a></p>
+  <p>Contact nr: +355 69 76 53 669</p>
+  </section>
+
+
+  <footer>
+    <p>© 2025 Elona Hysi</p>
+  </footer>
+
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); 
+      }
+    });
+  });
+
+  document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
